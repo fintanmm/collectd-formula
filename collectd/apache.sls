@@ -8,4 +8,4 @@
     - mode: 644
     - template: jinja
     - defaults:
-        host: {{ salt['grains.get']('host') }}
+        host: {{ salt['pillar.get']('collectd:host') }}
