@@ -25,7 +25,7 @@ collectd:
     - mode: 644
     - template: jinja
     - defaults:
-        hostname: {{ salt['grains.get']('fqdn') }}
+        hostname: {{ salt['pillar.get']('host') }}
         FQDNLookup: {{ salt['pillar.get']('collectd:FQDNLookup', 'false') }}
         types: {{ salt['pillar.get']('collectd:TypesDB') }}
         default: {{ salt['pillar.get']('collectd:plugins:default') }}
